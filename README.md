@@ -1,0 +1,2 @@
+# SpaceBot
+Javascript Crypto Bot

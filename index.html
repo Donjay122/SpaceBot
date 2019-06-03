@@ -5,7 +5,7 @@
     </head>
     <body>
         <header>
-            <span style="color: red; font-style: italic; position: absolute; left: 20%; top: 3%; font-size: .7em;" id="logIcon">offline</span>
+            <span style="color: red; font-style: italic; position: absolute; top: 3%;" id="logIcon">offline</span>
             <div class="main-header" style="display: flex; font-style: italic;">
                 <img src="img/codespace-primary-logo.svg" width="200px;">
             </div>
@@ -15,11 +15,11 @@
             <div class="main-content">
                 
                 <ul class="list" style="
-                                        height: 500px; max-height: 500px; overflow: auto; position: relative; width: 500px; margin-top: 20px;">
+                                        height: 500px; max-height: 500px; overflow: auto; position: relative; margin-top: 20px;">
                 </ul>
                 <form action="#" method="get">
-                    <input type="password" style=" display: inline;width: 30% ; font-size: 20px; border: none; box-shadow: 2px 2px 30px black; padding: 20px; border-radius: 5px; font-style: italic;" placeholder="start typing...">
-                    <button type="button" style=" display: inline;width: 10% ; font-size: 30px; box-shadow: 2px 0px 30px grey; padding: 15px; margin-left: 2px; border-radius: 5px; color: white; background-color: black; cursor: pointer;">Send</button>
+                    <input type="password" style=" display: inline; font-size: 20px; border: none; box-shadow: 2px 2px 30px black; padding: 20px; border-radius: 5px; font-style: italic;" placeholder="start typing...">
+                    <button type="button" style=" display: inline; font-size: 1.2em; box-shadow: 2px 0px 30px grey; padding: 15px; margin-left: 2px; border-radius: 5px; color: white; background-color: black; cursor: pointer;">Send</button>
                 </form><i id="error" style="margin: 0; padding: 10px; color: orange; float: none;"></i>
                 <div class="engine">
                     
@@ -33,6 +33,16 @@
 
         <style>
 /*             SOME STYLES HERE     SOME STYLES HERE          SOME STYLES HERE                */ 
+            
+            #logIcon{
+                left: 20%;
+                font-size: .7em;
+            }
+            
+            .list{
+                width:60%;
+            }
+            
             .navigators{
                 position: absolute;
                 left: 70%;
@@ -49,7 +59,7 @@
                 box-shadow: 3px 3px 5px grey;
                 list-style: none;
                 padding: 15px;
-                max-width: 70%;
+                max-width: 55%;
                 margin: 10px -15px;
                 right: 50%;
                 border-radius: 5px;
@@ -90,6 +100,48 @@
                 font-size: 20px;
                 color: white;
                 font-style: italic;
+            }
+                form input{
+                    width: 40%;
+                }
+            
+            
+            @media (max-width: 450px){
+                
+            #logIcon{
+                left: 80%;
+                font-size: 1.2em;
+            }
+                .profileuser{
+                    display: none;
+                }
+                
+                body{
+                    background-image: none;
+                    background-color: white;
+                }
+                
+                .navigators{
+                    display: none;
+                }
+                
+                form input{
+                    width: 70%;
+                }
+                
+            .list{
+                width:90%;
+                }
+                
+                .list img{
+                    display: none;
+                }
+                
+                li{
+                   max-width: none;
+                    margin-right: 5%;
+                }
+                
             }
             
         
@@ -165,7 +217,7 @@
                          'Hows your day going ?',
                          'Im doing ok. Thanks',
                          '6 Beach road, Woodstock',
-                         'shut the fuck up',
+                         'My pleasure',
                          '',
                          
                          '<div style="height:256px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; box-sizing:content-box; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38; padding: 0px; margin: 0px; width: 99%;"><div style="height:236px;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=dark&cnt=3&pref_coin_id=1505&graph=yes" width="100%" height="232" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing:content-box; margin: 3px 6px 10px 0px; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>',
@@ -229,7 +281,7 @@
             let ul = document.getElementsByTagName('ul')[0];
             li.textContent = 'Enter Key . 1234';
             li.style.backgroundColor = 'tomato';
-            li.style.marginLeft = '20%';
+            li.style.marginLeft = '10%';
             let chatTime = document.createElement('i');
             chatTime.textContent = dateFunction();
             li.appendChild(chatTime);
@@ -276,8 +328,8 @@ const bot = ()=>{/////////////////////////////////////////////MAIN FUNCTION/////
                      chatTime.textContent = dateFunction();
                      li.style.backgroundColor = 'tomato';
                      li.style.color = 'white';
-                     li.style.marginLeft = '20%';
-                     li.style.left = '40%';
+                     li.style.marginLeft = '10%';
+                     li.style.left = '20%';
                      li.style.lineHeight = '1.5';
                 setTimeout(()=>{
                     chatTime.style.color ='white';
@@ -291,11 +343,11 @@ const bot = ()=>{/////////////////////////////////////////////MAIN FUNCTION/////
                      userInput.value = '';
                      let li = document.createElement('li');
                      let ul = document.getElementsByTagName('ul')[0];
-                     li.textContent = 'what do you mean ?';
+                     li.textContent = 'Ask me question about bitcoin,etherum ripple... ?';
                      li.style.backgroundColor = 'tomato';
                      li.style.color = 'white';
-                     li.style.marginLeft = '20%';
-                     li.style.left = '40%';
+                     li.style.marginLeft = '10%';
+                     li.style.left = '20%';
                 setTimeout(()=>{
                     ul.appendChild(li);
                     playSound();
